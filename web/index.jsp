@@ -1,7 +1,4 @@
-<%@ page import="javax.persistence.EntityManagerFactory" %>
-<%@ page import="javax.persistence.Persistence" %>
-<%@ page import="javax.persistence.EntityManager" %>
-<%@ page import="com.test.Employee" %>
+<%--
   Created by IntelliJ IDEA.
   User: chanhn
   Date: 18/06/2018
@@ -14,16 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  <%
-    EntityManagerFactory factory = Persistence.createEntityManagerFactory("cjpa");
-    EntityManager em = factory.createEntityManager();
-    em.getTransaction().begin();
-    Employee emp = new Employee();
-    emp.setName("Chanh");
-    emp.setEmail("m@gmail.com");
-    em.persist(emp);
-    em.getTransaction().commit();
-    em.close();
-  %>
+    <p>Body</p>
   </body>
 </html>

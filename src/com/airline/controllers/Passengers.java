@@ -1,20 +1,20 @@
 package com.airline.controllers;
 
 import javax.ejb.EJB;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Calendar;
-import java.util.Date;
+import java.util.List;
 
 /**
- * Servlet implementation class AddPassenger
+ * Servlet implementation class Passengers
  */
-@WebServlet("/AddPassenger")
-public class AddPassenger extends HttpServlet {
+@WebServlet("/Passengers")
+public class Passengers extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	@EJB
@@ -23,7 +23,7 @@ public class AddPassenger extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddPassenger() {
+    public Passengers() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,38 +33,21 @@ public class AddPassenger extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		List<Passenger> pList = (List<Passenger>) ps.getPassengers();
+		
+		request.setAttribute("passengers_list", pList);
+		
+		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/views/passengers_list.jsp");
+		
+		view.forward(request, response);
+			
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String fName = request.getParameter("first_name");
-		String lName = request.getParameter("last_name");
-		String dob_raw = request.getParameter("dob"); // 5/17/1990
-		String gender = request.getParameter("gender");
-		Passenger p = new Passenger();
-
-		p.setFirstName(fName);
-		p.setLastName(lName);
-		
-		String[] dobArr = dob_raw.split("\\/");
-		
-		Calendar cal = Calendar.getInstance();
-		
-		cal.set(Calendar.YEAR, Integer.parseInt(dobArr[2]));
-		cal.set(Calendar.MONTH, Integer.parseInt(dobArr[0]) - 1);
-		cal.set(Calendar.DAY_OF_MONTH, Integer.parseInt(dobArr[1]));
-		
-		Date dob = cal.getTime();
-
-		p.setDob(dob);
-		p.setGender(Gender.valueOf(gender));
-		
-		System.out.println(p);
-		
-		ps.addPassenger(p);
-		response.sendRedirect("Passengers");
+		// TODO Auto-generated method stub
 	}
 
 }

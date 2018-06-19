@@ -1,10 +1,5 @@
 package com.airline.controllers;
 
-import com.airline.models.Airplane;
-import com.airline.models.Flight;
-import com.airline.models.FlightDestinations;
-import com.airline.service.FlightService;
-
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,9 +22,8 @@ public class AddFlight extends HttpServlet {
      */
 	
 	@EJB
-	FlightService fs;
-	
-	
+    FlightService fs;
+
     public AddFlight() {
         super();
         // TODO Auto-generated constructor stub
@@ -40,33 +34,45 @@ public class AddFlight extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Flight f = new Flight();
-		
-		f.setFlightOrigin(FlightDestinations.Los_Angeles);
-		
-		f.setFlightDestination(FlightDestinations.London);
-		
-		f.setPrice(400);
+		String from_destination = request.getParameter("from_destination");
+		f.setFlightOrigin(FlightDestinations.valueOf(from_destination));
+		String to_destination = request.getParameter("to_destination");
+		f.setFlightDestination(FlightDestinations.valueOf(to_destination));
+		String price = request.getParameter("price");
+		f.setPrice(Integer.parseInt(price));
+		Integer year = Integer.parseInt(request.getParameter("year"));
+		Integer month = Integer.parseInt(request.getParameter("month"));
+		Integer day = Integer.parseInt(request.getParameter("day"));
+		Integer hour = Integer.parseInt(request.getParameter("hour"));
+		Integer minute = Integer.parseInt(request.getParameter("minute"));
 		
 		Calendar cal = Calendar.getInstance();
 		
-		cal.set(Calendar.YEAR, 2014);
-		cal.set(Calendar.MONTH, 10);
-		cal.set(Calendar.DAY_OF_MONTH, 4);
-		cal.set(Calendar.HOUR_OF_DAY, 19);
-		cal.set(Calendar.MINUTE, 0);
+		cal.set(Calendar.YEAR, year);
+		cal.set(Calendar.MONTH, month);
+		cal.set(Calendar.DAY_OF_MONTH, day);
+		cal.set(Calendar.HOUR_OF_DAY, hour);
+		cal.set(Calendar.MINUTE, minute);
 		
 		Date flightTime = cal.getTime();
-		
 		System.out.println(flightTime);
-		
 		f.setFlightTime(flightTime);
-		
 		Airplane a = new Airplane();
+
+		String planeMake = request.getParameter("airplane_make");
+		String planeModelName = request.getParameter("airplane_model");
+		Integer seating = Integer.parseInt(request.getParameter("airplane_seating"));
 		
-		a.setModelName("787");
-		a.setPlaneMake("Boeing");
-		a.setSeatingCapacity(250);
+		a.setModelName(planeModelName);
+		a.setPlaneMake(planeMake);
+		a.setSeatingCapacity(seating);
 		
 		f.setAirplaneDetail(a);
 		
@@ -75,13 +81,7 @@ public class AddFlight extends HttpServlet {
 		
 		fs.addFlight(f, a);
 		
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		response.sendRedirect("Flights");
 	}
 
 }
