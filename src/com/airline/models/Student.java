@@ -32,6 +32,13 @@ public class Student implements Serializable {
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Double getAge() {
         return age;
     }
@@ -41,7 +48,8 @@ public class Student implements Serializable {
 
     @Override
     public String toString() {
-        return "Student [id=" + id + ", name=" + name
+        return "Student [id=" + id
+                + ", name=" + name
                 + ", age=" + age + "]";
     }
 }
