@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="java ee app exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/java_ee_app_exploded</output-path>
+    <root id="root">
+      <element id="module-output" name="cjpa" />
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="Java EE 6-Java EE 6" />
+        <element id="library" level="project" name="JPA 2.1-JPA 2.1" />
+      </element>
+      <element id="javaee-facet-resources" facet="cjpa/web/Web" />
+      <element id="jpa-descriptors" facet="cjpa/jpa/JPA" />
+    </root>
+  </artifact>
+</component>
