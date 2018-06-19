@@ -4,9 +4,7 @@ import com.airline.models.Student;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -22,8 +20,8 @@ public class StudentService {
         // TODO Auto-generated constructor stub
     }
 
-    @PersistenceContext(unitName = "student")
-    private EntityManager em;
+    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("cjpa");
+    private EntityManager em = emf.createEntityManager();
 
     public void addStudent(Student stu) {
         em.persist(stu);

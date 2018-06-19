@@ -36,5 +36,6 @@
     <orderEntry type="library" name="eclipselink-2.7.1" level="project" />
     <orderEntry type="library" name="persistence-api-1.0.2" level="project" />
     <orderEntry type="library" name="mysql-connector-java-8.0.11" level="project" />
+    <orderEntry type="library" name="json-simple-1.1.1" level="project" />
   </component>
 </module>

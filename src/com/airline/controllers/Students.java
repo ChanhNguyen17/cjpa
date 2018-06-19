@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("")
+@WebServlet("/Students")
 public class Students extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -34,7 +34,7 @@ public class Students extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Student> stuList = stuS.getStudents();
         request.setAttribute("students_list", stuList);
-        RequestDispatcher view = request.getRequestDispatcher("WEB-INF/views/passengers_list.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("index.jsp");
         view.forward(request, response);
     }
 

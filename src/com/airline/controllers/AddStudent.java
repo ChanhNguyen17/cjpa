@@ -2,6 +2,9 @@ package com.airline.controllers;
 
 import com.airline.models.Student;
 import com.airline.service.StudentService;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -40,16 +43,21 @@ public class AddStudent extends HttpServlet {
      * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String name = request.getParameter("name");
-        String ageRaw = request.getParameter("age");
         Student stu = new Student();
-
-        stu.setName(name);
-        stu.setAge(Double.parseDouble(ageRaw));
-
-        System.out.println(stu);
-
-        stuS.addStudent(stu);
-        response.sendRedirect("");
+        String body = request.getReader().lines()
+                .reduce("", (accumulator, actual) -> accumulator + actual);
+        JSONParser parser = new JSONParser();
+        try {
+            JSONObject json = (JSONObject) parser.parse(body);
+            String name = (String) json.get("name");
+            String ageRaw = (String) json.get("age");
+            stu.setName(name);
+            stu.setAge(Double.parseDouble(ageRaw));
+            System.out.println(stu);
+            stuS.addStudent(stu);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        response.sendRedirect("/Students");
     }
 }
