@@ -14,7 +14,6 @@
           <element id="library" level="project" name="eclipselink-2.7.1" />
           <element id="library" level="project" name="persistence-api-1.0.2" />
           <element id="library" level="project" name="mysql-connector-java-8.0.11" />
-          <element id="library" level="project" name="json-simple-1.1.1" />
         </element>
       </element>
     </root>

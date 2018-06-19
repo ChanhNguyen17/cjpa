@@ -6,26 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f5e6b2d-c31f-4936-83f9-120bbbe8b541" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cjpa_war_exploded/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cjpa_war_exploded/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cjpa_war_exploded/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cjpa_war_exploded/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cjpa_war_exploded/WEB-INF/classes/com/airline/controllers/AddStudent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cjpa_war_exploded/WEB-INF/classes/com/airline/controllers/Students.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cjpa_war_exploded/WEB-INF/classes/com/airline/models/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cjpa_war_exploded/WEB-INF/classes/com/airline/models/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cjpa_war_exploded/WEB-INF/classes/com/airline/service/StudentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cjpa_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cjpa_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cjpa/com/airline/controllers/AddStudent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cjpa/com/airline/controllers/Students.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cjpa/com/airline/models/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cjpa/com/airline/models/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cjpa/com/airline/service/StudentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/airline/controllers/AddStudent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/airline/controllers/Students.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/airline/controllers/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/airline/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/airline/models/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/airline/service/StudentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="8f5e6b2d-c31f-4936-83f9-120bbbe8b541" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,8 +39,8 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
+            <state relative-caret-position="462">
+              <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -247,9 +228,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.26243386" />
     <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
@@ -687,7 +669,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41619000" />
+    <option name="totallyTimeSpent" value="41728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -712,7 +694,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" sideWeight="0.49930555" visible="true" weight="0.23798077" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49930555" weight="0.23798077" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Persistence" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.15833333" />
@@ -992,8 +974,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="38" column="45" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
+        <state relative-caret-position="462">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
         </state>
       </provider>
     </entry>
